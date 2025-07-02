@@ -27,7 +27,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-## Install libraries
+## Install libraries for MCP Server
 
 ```
 # Create a virtual environment
@@ -39,4 +39,13 @@ source your_folder/bin/activate
 # Now install your libraries
 pip install wikipedia wikipedia_sections mcp
 
+```
+
+## Install libraries for MCP Client
+
+```
+pip install langchain
+pip install langgraph
+pip install langchain-openai
+pip install langchain-mcp-adapters
 ```
