@@ -32,6 +32,18 @@ def fetch_wikipedia_info(query: str) -> dict:
             "error": "No Wikipedia page could be loaded for this query."
         }
 
+@mcp.tool()
+def list_wikipedia_sections(topic: str) -> dict:
+    """
+    Return a list of section titles from the Wikipedia page of a given topic.
+    """
+    try:
+        page = wikipedia.page(topic)
+        sections = page.sections
+        return {"sections": sections}
+    except Exception as e:
+        return {"error": str(e)}
+
 
 # Run the MCP server
 if __name__ == "__main__":
